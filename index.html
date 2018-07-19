@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieBucket</title>
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="src/images/applogo.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li id="nav-dashboard" class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li id="nav-usercol" class="nav-item">
+                        <a class="nav-link" href="#">User Collection</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <header class="text-white">
+            <div class="jumbotron jumbotron-fluid">
+                    <div class="col-xl-9 mx-auto">
+                        <h1 class="mb-5 text-center">Learn anytime, anywhere. Get ready for future.</h1>
+                    </div>
+            </div>
+    
+        </header>
+     -->
+    <main id="main">
+        
+
+        <section id="search" class="search">
+            <div class="container">
+                <form>
+                    <div class="form-group searchbox">
+                        <input type="text" class="form-control" id="input_moviesearch" name="movie_v1[query]" type="search" autocomplete="off" placeholder="Search for movie">
+                        <span id="btn_moviesearch" class="search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        <div id="dashboardContent">
+            <section id="popularlist">
+                <div class="container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 px-0">
+                        <h4>Popular Movies</h4>
+                        <hr>
+                        <div id="popular-movies" class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="topcollection">
+                <div class="container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 px-0">
+                        <h4>Top Collections
+                            
+                        </h4>
+                        <hr>
+
+                        <div id="topcollection-movies" class="row">
+
+
+                        </div>
+                        <span class="btnContainer">
+                            <a class="btn btn-dark" href="#" data-toggle="modal" data-target="#addcollectionModal">Add Collection</a>
+                            <a class="btn btn-dark" href="#" id="btn-morecollection">More Collections</a>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="movieDetailContent" style="display:none">
+
+        </div>
+
+        <div id="searchmoviesContent" style="display:none">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 px-0">
+                    <h4>Search Movies</h4>
+                    <hr>
+                    <div id="search-movies" class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="userCollectionListContent" style="display:none">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 px-0">
+                    <h4>User Top Collection</h4>
+                    <hr>
+                    <div id="userCollection" class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div id="addToSelectedCollection">
+
+        </div> -->
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 copyright">Copyright &copy; www.moviebucket.com
+                    <br>
+
+                    <p>Designed and Maintained by the core team with the help of our contributors. Currently v4.1.1. Code licensed
+                        MIT, docs CC BY 3.0.</p>
+                </div>
+                <!-- <div class="col-lg-2">
+                        <h6 class="text-white">Our Product</h6>
+                        <ul class="list-unstyled">
+                            <li>Features</li>
+                            <li>Solutions</li>
+                            <li>plans</li>
+                            <li>Sign in</li>
+                        </ul>
+                    </div> -->
+                <div class="col-lg-2 offset-lg-4">
+                    <h6 class="text-white">Other things</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-light" href="#">Sign in</a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="#">data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <span class="social-icon ml-2 mr-2">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-icon ml-2 mr-2">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-icon ml-2 mr-2">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Modal Movie Collection -->
+
+
+
+    <div class="modal fade" id="addMovieToCollectionModal" tabindex="-1" role="dialog" aria-labelledby="addMovieToCollectionModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title" id="addMovieToCollectionModalTitle">Add Movie To Collection</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addmovieform" class="needs-validation" action="" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label>Name :</label>
+                                <label id="lbl_mName"></label>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label for="selcolletion">Select Collection:</label>
+                                <select class="form-control" id="selcolletion">
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a collection
+                                </div>
+                            </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="btn-addmovie" type="button" class="btn btn-secondary" data-dismiss="modal">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="modal fade" id="addcollectionModal" tabindex="-1" role="dialog" aria-labelledby="addcollectionModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title" id="addcollectionModalTitle">Add Collection</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addcollectionform" class="needs-validation" action="" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-12 col-sm-12 mb-1">
+                                    <label for="cName">Name</label>
+                                    <input type="text" class="form-control" id="cName" placeholder="Name" value="" required>
+                                    <div class="invalid-feedback">
+                                        Please enter name
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 mb-1">
+                                    <label for="cDesc">Description</label>
+                                    <textarea class="form-control rounded-0" id="cDesc" rows="10" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter some description
+                                    </div>
+                                </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button id="btn-addCollection" type="button" class="btn btn-secondary" data-dismiss="modal">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+        <div class="modal fade" id="movielistInCollectionModal" tabindex="-1" role="dialog" aria-labelledby="movielistInCollectionModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title" id="movielistInCollectionModalTitle">Collection Details</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="movielistInCollectionform" class="needs-validation" action="" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label for="editcName">Name</label>
+                                <input type="text" class="form-control" id="editcName" placeholder="Name" value="" required>
+                                <div class="invalid-feedback">
+                                    Please enter name
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label for="editcDesc">Description</label>
+                                <textarea class="form-control rounded-0" id="editcDesc" rows="10" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter some description
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label>Movie List</label>
+                                <ul id="mlist">
+                                    <li>adc<span><a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
+                                    <li>dfghsdf<a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
+                                    <li>dfgsdf<a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
+                                </ul>
+                                <div class="invalid-feedback">
+                                    Please enter some description
+                                </div>
+                            </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="btn-savecollection" type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="collectiondeleteConfirmModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Delete Collection</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="c_d_msg"></p>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button id="btn-deletecol" type="button" class="btn btn-primary">Yes</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+            <div id="snackbar" style="display:none"></div>
+            <div id="movieloader" class="loader-container" style="display:none">
+                    <div class="overlay"></div>
+                    <div class="loader">
+                        <svg class="circular" viewBox="25 25 50 50">
+                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                </div>
+
+            <!-- app js files -->
+            <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="dist/bundle.js"></script>
+</body>
+
+</html>
