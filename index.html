@@ -51,7 +51,7 @@
             <div class="container">
                 <form>
                     <div class="form-group searchbox">
-                        <input type="text" class="form-control" id="input_moviesearch" name="movie_v1[query]" type="search" autocomplete="off" placeholder="Search for movie">
+                        <input type="text" class="form-control" id="input_moviesearch" name="movie_v1[query]" autocomplete="off" placeholder="Search for movie">
                         <span id="btn_moviesearch" class="search-icon">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </span>
@@ -195,7 +195,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="addmovieform" class="needs-validation" action="" novalidate>
+                    <form id="addmovieform" class="needs-validation" novalidate >
                         <div class="form-row">
                             <div class="col-md-12 col-sm-12 mb-1">
                                 <label>Name :</label>
@@ -210,8 +210,8 @@
                                     Please select a collection
                                 </div>
                             </div>
+                        </div>
                     </form>
-                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button id="btn-addmovie" type="button" class="btn btn-secondary" data-dismiss="modal">Add</button>
@@ -232,7 +232,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="addcollectionform" class="needs-validation" action="" novalidate>
+                        <form id="addcollectionform" class="needs-validation" novalidate>
                             <div class="form-row">
                                 <div class="col-md-12 col-sm-12 mb-1">
                                     <label for="cName">Name</label>
@@ -248,8 +248,8 @@
                                         Please enter some description
                                     </div>
                                 </div>
+                            </div>
                         </form>
-                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button id="btn-addCollection" type="button" class="btn btn-secondary" data-dismiss="modal">Add</button>
@@ -271,7 +271,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="movielistInCollectionform" class="needs-validation" action="" novalidate>
+                    <form id="movielistInCollectionform" class="needs-validation" novalidate>
                         <div class="form-row">
                             <div class="col-md-12 col-sm-12 mb-1">
                                 <label for="editcName">Name</label>
@@ -290,16 +290,14 @@
                             <div class="col-md-12 col-sm-12 mb-1">
                                 <label>Movie List</label>
                                 <ul id="mlist">
-                                    <li>adc<span><a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
-                                    <li>dfghsdf<a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
-                                    <li>dfgsdf<a id="btn-addtocol" href="#" class="btn btn-dark">Add To Collection</a></span></li>
+                                  
                                 </ul>
                                 <div class="invalid-feedback">
                                     Please enter some description
                                 </div>
                             </div>
+                        </div>
                     </form>
-                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button id="btn-savecollection" type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>

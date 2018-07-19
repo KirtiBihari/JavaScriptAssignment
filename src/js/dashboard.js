@@ -29,237 +29,7 @@
     }
 
 
-    let MovieData = {
-        results: [{
-            "vote_count": 169,
-            "id": 442249,
-            "video": false,
-            "vote_average": 6.3,
-            "title": "The First Purge",
-            "popularity": 90.809,
-            "poster_path": "/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
-            "original_language": "en",
-            "original_title": "The First Purge",
-            "genre_ids": [
-                28,
-                27,
-                878,
-                53
-            ],
-            "backdrop_path": "/dnaitaoCh8MftfYEVnprcuYExZp.jpg",
-            "adult": false,
-            "overview": "To push the crime rate below one percent for the rest of the year, the New Founding Fathers of America test a sociological theory that vents aggression for one night in one isolated community. But when the violence of oppressors meets the rage of the others, the contagion will explode from the trial-city borders and spread across the nation.",
-            "release_date": "2018-07-04"
-        },
-        {
-            "vote_count": 2057,
-            "id": 338970,
-            "video": false,
-            "vote_average": 6.2,
-            "title": "Tomb Raider",
-            "popularity": 84.695,
-            "poster_path": "/ePyN2nX9t8SOl70eRW47Q29zUFO.jpg",
-            "original_language": "en",
-            "original_title": "Tomb Raider",
-            "genre_ids": [
-                28,
-                12,
-                14,
-                18,
-                9648,
-                53
-            ],
-            "backdrop_path": "/jLYhKjSC8LyXzWZc6VwPjMYP2wy.jpg",
-            "adult": false,
-            "overview": "Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond her limits when she finds herself on the island where her father disappeared.",
-            "release_date": "2018-03-05"
-        },
-        {
-            "vote_count": 2923,
-            "id": 383498,
-            "video": false,
-            "vote_average": 7.6,
-            "title": "Deadpool 2",
-            "popularity": 67.978,
-            "poster_path": "/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
-            "original_language": "en",
-            "original_title": "Deadpool 2",
-            "genre_ids": [
-                28,
-                35,
-                878
-            ],
-            "backdrop_path": "/3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg",
-            "adult": false,
-            "overview": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
-            "release_date": "2018-05-15"
-        },
-        {
-            "vote_count": 2783,
-            "id": 238636,
-            "video": false,
-            "vote_average": 6.6,
-            "title": "The Purge: Anarchy",
-            "popularity": 75.367,
-            "poster_path": "/l1DRl40x2OWUoPP42v8fjKdS1Z3.jpg",
-            "original_language": "en",
-            "original_title": "The Purge: Anarchy",
-            "genre_ids": [
-                27,
-                53
-            ],
-            "backdrop_path": "/zWGAnbxjjwY3xFGuOeR26LGbBlG.jpg",
-            "adult": false,
-            "overview": "One night per year, the government sanctions a 12-hour period in which citizens can commit any crime they wish -- including murder -- without fear of punishment or imprisonment. Leo, a sergeant who lost his son, plans a vigilante mission of revenge during the mayhem. However, instead of a death-dealing avenger, he becomes the unexpected protector of four innocent strangers who desperately need his help if they are to survive the night.",
-            "release_date": "2014-07-17"
-        },
-        {
-            "vote_count": 6710,
-            "id": 284054,
-            "video": false,
-            "vote_average": 7.3,
-            "title": "Black Panther",
-            "popularity": 75.189,
-            "poster_path": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
-            "original_language": "en",
-            "original_title": "Black Panther",
-            "genre_ids": [
-                28,
-                12,
-                14,
-                878
-            ],
-            "backdrop_path": "/6ELJEzQJ3Y45HczvreC3dg0GV5R.jpg",
-            "adult": false,
-            "overview": "King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
-            "release_date": "2018-02-13"
-        },
-        {
-            "vote_count": 9,
-            "id": 318484,
-            "video": false,
-            "vote_average": 5.2,
-            "title": "Qayamat: City Under Threat",
-            "popularity": 71.091,
-            "poster_path": "/e6n3Tf86MJgqtF34bLogGOpkNQf.jpg",
-            "original_language": "hi",
-            "original_title": "Qayamat: City Under Threat",
-            "genre_ids": [
-                28,
-                18,
-                80
-            ],
-            "backdrop_path": "/bsiSNHnzU9brwsP1hVs1AQMt9hl.jpg",
-            "adult": false,
-            "overview": "CBI Officer Akram Sheikh (Sunil Shetty) is on the verge of nabbing three dreaded Pakistan-backed arms dealers , the brothers Ali (Arbaaz Khan) and Abbas (Sanjay Kapoor) and their common moll Laila (Isha Koppikar) . When Sheikh busts an important arms deal conducted by his three targets , Ali-Abbas join forces with Gopal (Chunky Pandey) , a corrupt scientist to get hold of a deadly virus and take the tourists at the Elphinstone Jail resort as hostage . Akram Sheikh is now compelled to get help from Rachit (Ajay Devgan) , a criminal serving jail time who was a former associate of Ali-Abbas and the only person in history to have successfully escaped the Elphinstone jail . Along with a commando team , they try to pull off a rescue attempt by breaking in the jail and rescuing the hostages .",
-            "release_date": "2003-07-11"
-        },
-        {
-            "vote_count": 26,
-            "id": 400155,
-            "video": false,
-            "vote_average": 7.5,
-            "title": "Hotel Transylvania 3: Summer Vacation",
-            "popularity": 69.096,
-            "poster_path": "/nbjqedtHhR6HFlAHFMTFGcnoTzq.jpg",
-            "original_language": "en",
-            "original_title": "Hotel Transylvania 3: Summer Vacation",
-            "genre_ids": [
-                10751,
-                14,
-                35,
-                16
-            ],
-            "backdrop_path": "/m03jul0YdVEOFXEQVUv6pOVQYGL.jpg",
-            "adult": false,
-            "overview": "Dracula, Mavis, Johnny and the rest of the Drac Pack take a vacation on a luxury Monster Cruise Ship, where Dracula falls in love with the ship's captain, Ericka, who's secretly a descendant of Abraham Van Helsing, the notorious monster slayer.",
-            "release_date": "2018-07-12"
-        },
-        
-        {
-            "vote_count": 8434,
-            "id": 102899,
-            "video": false,
-            "vote_average": 7,
-            "title": "Ant-Man",
-            "popularity": 66.979,
-            "poster_path": "/D6e8RJf2qUstnfkTslTXNTUAlT.jpg",
-            "original_language": "en",
-            "original_title": "Ant-Man",
-            "genre_ids": [
-                878,
-                28,
-                12
-            ],
-            "backdrop_path": "/kvXLZqY0Ngl1XSw7EaMQO0C1CCj.jpg",
-            "adult": false,
-            "overview": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
-            "release_date": "2015-07-14"
-        },
-        {
-            "vote_count": 3473,
-            "id": 158015,
-            "video": false,
-            "vote_average": 6.1,
-            "title": "The Purge",
-            "popularity": 66.926,
-            "poster_path": "/tGGJOuLHX7UDlTz57sjfhW1qreP.jpg",
-            "original_language": "en",
-            "original_title": "The Purge",
-            "genre_ids": [
-                878,
-                27,
-                53
-            ],
-            "backdrop_path": "/1sZ9Nnic1ldHhHttAMDmNxaNM04.jpg",
-            "adult": false,
-            "overview": "Given the country's overcrowded prisons, the U.S. government begins to allow 12-hour periods of time in which all illegal activity is legal. During one of these free-for-alls, a family must protect themselves from a home invasion.",
-            "release_date": "2013-05-31"
-        },
-        {
-            "vote_count": 31,
-            "id": 447200,
-            "video": false,
-            "vote_average": 6.4,
-            "title": "Skyscraper",
-            "popularity": 62.376,
-            "poster_path": "/5LYSsOPzuP13201qSzMjNxi8FxN.jpg",
-            "original_language": "en",
-            "original_title": "Skyscraper",
-            "genre_ids": [
-                28,
-                53,
-                18
-            ],
-            "backdrop_path": "/9bn8ApCTuqTb7rLoxzyGcyzjuFx.jpg",
-            "adult": false,
-            "overview": "Framed and on the run, a former FBI agent must save his family from a blazing fire in the world's tallest building.",
-            "release_date": "2018-07-11"
-        },
-        {
-            "vote_count": 11463,
-            "id": 135397,
-            "video": false,
-            "vote_average": 6.5,
-            "title": "Jurassic World",
-            "popularity": 58.425,
-            "poster_path": "/jjBgi2r5cRt36xF6iNUEhzscEcb.jpg",
-            "original_language": "en",
-            "original_title": "Jurassic World",
-            "genre_ids": [
-                28,
-                12,
-                878,
-                53
-            ],
-            "backdrop_path": "/t5KONotASgVKq4N19RyhIthWOPG.jpg",
-            "adult": false,
-            "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
-            "release_date": "2015-06-06"
-        }
-        ]
-    };
-
+   
     // let apiKey="43f4a6bcfb684cb473229f4869508de4";
     let baseURL = 'https://api.themoviedb.org/3/';
     let APIKEY = "43f4a6bcfb684cb473229f4869508de4";
@@ -650,8 +420,8 @@ let movieMoreInfoClick= (evt) => {
                 appendTopCollectionCards(i, 'topcollection-movies');
             }
         } else {
-            let htmlcontent = $(`<div class="col-lg-12 col-md-12 col-sm-12 px-0">
-                          <h3>No Collection Available</h3>
+            let htmlcontent = $(`<div class="col-lg-12 col-md-12 col-sm-12 px-0 text-center">
+                          <h5>No Collection Available</h5>
                         </div>`);
             htmlcontent.appendTo(appendContainer);
         }
@@ -735,6 +505,13 @@ let movieMoreInfoClick= (evt) => {
                 appendTopCollectionCards(i, 'userCollection');
             }
         }
+        else {
+            let htmlcontent = $(`<div class="col-lg-12 col-md-12 col-sm-12 px-0 text-center">
+                          <h5>No Collection Available</h5>
+                        </div>`);
+            htmlcontent.appendTo(appendContainer);
+        }
+
 
     }
     let moreUserCollection=()=>{
