@@ -361,19 +361,10 @@ let movieMoreInfoClick= (evt) => {
                     </li>
                     <li>
                         <div class="editOption">
-                            <i class="fa fa-list" aria-hidden="true"></i>
+                            <a class="btn btn-dark text-light" href="#"><i class="fa fa-list text-light" aria-hidden="true"></i></a>
                         </div>
                     </li>
-                    <li>
-                        <div class="addfavorite">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                    </li>
+                    
                 </ul>
                 <div class="overview-content">
                     <h3>Overview</h3>
@@ -495,6 +486,10 @@ let movieMoreInfoClick= (evt) => {
         createJsonData("TopCollection", JSON.stringify(TopCollectionLocal));
         if($('#topcollection-movies').children().length < 4){
             appendTopCollectionCards(newCollection, 'topcollection-movies');
+        }
+
+        if(currentViewName == "userCollectionListContent"){
+            appenduserCollections();
         }
         
     }
