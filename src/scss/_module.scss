@@ -104,7 +104,9 @@ nav{
 
     #topcollection, #userCollectionListContent{
         margin: 3rem 0 2rem 0;
-
+            h4{
+                display: inline;
+            }
         .card {
             position: relative;
             display: flex;

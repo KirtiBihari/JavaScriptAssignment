@@ -207,6 +207,11 @@
 
             $('#mlist').sortable();
             $('#mlist').disableSelection();
+
+            $('#addcollectionModal').on('show.bs.modal', function () {
+                $('#cName').val('');
+                $('#cDesc').val('');
+              });
         });
 
     }
@@ -389,22 +394,35 @@ let movieMoreInfoClick= (evt) => {
         
         $(".form-row #lbl_mName").text(currentMovieDetails.title);
         let modalColComboBox= $(".form-row #selcolletion");
+        modalColComboBox.html('');
         for(let i of TopCollectionLocal){
             modalColComboBox.append(`<option id="copt`+i.Id+`">
                                         `+i.Name+`
                                     </option>`);
         }
-
+        if(TopCollectionLocal.length == 0){
+            $("#btn-addmovie").prop('disabled', true);
+        }else{
+            $("#btn-addmovie").prop('disabled', false);
+        }
         $("#addMovieToCollectionModal").modal('show');
         $("#btn-addmovie").click(function (e) {
             let form = $('#addmovieform')[0];
-            let selectedOptionId=$('.form-row #selcolletion option:selected')[0].id;
-            if (form.checkValidity() === false) {
-                e.preventDefault();
-                e.stopPropagation();
+            let selectedOptionId=-1;
+            if($('.form-row #selcolletion option:selected').length > 0){
+                selectedOptionId=$('.form-row #selcolletion option:selected')[0].id;
             }
-            form.classList.add('was-validated');
-            addMovieToCollection(selectedOptionId.substr(4), currentMovieDetails);
+            if(selectedOptionId != -1){
+                if (form.checkValidity() === false) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                form.classList.add('was-validated');
+                addMovieToCollection(selectedOptionId.substr(4), currentMovieDetails);
+            }else{
+                showSnackBar("No Collection Selected");
+            }
+           
         });
     }
 
@@ -445,6 +463,9 @@ let movieMoreInfoClick= (evt) => {
     </div>`);
         htmlcontent.appendTo(appendContainer);
         // $('#c' + data.Id).click(onCollectionClick);
+        if(currentViewName == "userCollectionListContent"){
+            $('#topcollection-movies').html('');
+        }
         $('#edit' + data.Id).click(onCollectionClick);
         $('#del' + data.Id).click(onDeleteCollectionClick);
 
@@ -460,7 +481,10 @@ let movieMoreInfoClick= (evt) => {
                 e.stopPropagation();
             }
             form.classList.add('was-validated');
-            addTopCollection($('#cName').val().trim(), $('#cDesc').val().trim());
+            if($('#cName').val().trim() !== "" && $('#cDesc').val().trim() !== ""){
+                addTopCollection($('#cName').val().trim(), $('#cDesc').val().trim());
+            }
+            
         });
     }
 
@@ -472,7 +496,9 @@ let movieMoreInfoClick= (evt) => {
         if($('#topcollection-movies').children().length < 4){
             appendTopCollectionCards(newCollection, 'topcollection-movies');
         }
+        
     }
+    
     let addMovieToCollection=(cId, mdata)=>{
         let cindex = TopCollectionLocal.findIndex(x => x.Id == cId);
         if( cindex != -1){
@@ -586,7 +612,11 @@ let movieMoreInfoClick= (evt) => {
             
             TopCollectionLocal.splice(cindex,1);
             createJsonData("TopCollection", JSON.stringify(TopCollectionLocal));
-            populateTopCollectionCards();
+            if(currentViewName == "userCollectionListContent"){
+                appenduserCollections();
+            }else{
+                populateTopCollectionCards();
+            }
             showSnackBar('"'+colName+'" collection successfully deleted.');
             $("#collectiondeleteConfirmModal").modal('hide');
             updateDisplayViews(currentViewName);

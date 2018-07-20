@@ -226,5 +226,20 @@
         "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
         "release_date": "2015-06-06"
     }
+
+    {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'eslint-loader',
+            options: {
+              presets: ['env']
+            }
+          }
+    }
+
     ]
 }
+
+
